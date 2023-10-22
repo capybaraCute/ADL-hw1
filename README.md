@@ -34,7 +34,7 @@ bash train_QA_and_plot.sh
 bash choice_to_QA.sh ./path/to/context.json /path/to/test.json 
 ```
 
-2.Span selection predict
+3.Span selection predict
 ```shell
 bash QA.sh /path/to/context.json /path/to/test.json /path/to/pred/prediction.csv
 ```
