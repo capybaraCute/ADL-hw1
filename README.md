@@ -27,7 +27,7 @@ Model will be located at `./macbert_large_output/`
 bash train_QA_and_plot.sh
 ```
 ## Test
-1.Place model `choice_model/` `macbert_large_output/` in the same directory.
+1.Place model `choice_model/` `macbert_large_output/` at the same directory.
 
 2.Paragraph selection predict
 ```shell
