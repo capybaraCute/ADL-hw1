@@ -24,6 +24,7 @@ Model will be located at `./macbert_large_output/`
 
 ## Train and plot span selection model
 ```shell
+bash train_choice_to_QA.sh
 bash train_QA_and_plot.sh
 ```
 ## Test
