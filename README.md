@@ -40,3 +40,10 @@ bash choice_to_QA.sh ./path/to/context.json /path/to/test.json
 bash QA.sh /path/to/context.json /path/to/test.json /path/to/pred/prediction.csv
 ```
 
+step 2 and 3 can use:
+```shell
+bash run.sh /path/to/context.json /path/to/test.json /path/to/pred/prediction.csv
+```
+
+
+
