@@ -1,49 +1,32 @@
-# ADL-hw1
-homework 1 for ADL
+# ADL-hw3
+homework 3 for ADL
 
 ## How to train
-1.Place training data at the same directory
-  e.g. `./train.json` , `./valid.json` , `./context.json`
+1.Place training data folder and base model at the same directory
+  e.g. `./data/train.json` , `./Taiwan-LLM-7B-v2.0-chat`
   
-2.Train Paragraph selection Model by:
+2.run train.sh:
 ```shell
-bash train_select.sh
+bash train.sh
 ```
-  Model will be located at `./choice_model/`
+Peft model will be located at `./qlora/`
   
-3.Convert train and validation data to QA format
-```shell
-bash train_choice_to_QA.sh
-```
 
-4.Train Span selection Model by:
+## Caculate perplexity and plot learning curve
 ```shell
-bash train_QA_model.sh
+python ppl_plot.py --base_model_path ./Taiwan-LLM-7B-v2.0-chat --peft_path ./qlora/ --test_data_path ./data/public_test.json
 ```
-Model will be located at `./macbert_large_output/`
+Learning curve (learn_curve.png) and perplexity file(ppl_log.json) will and the same directory.
 
-## Train and plot span selection model
-```shell
-bash train_choice_to_QA.sh
-bash train_QA_and_plot.sh
-```
 ## Test
-1.Place model `choice_model/` `macbert_large_output/` at the same directory.
+1.run run.sh
 
-2.Paragraph selection predict
 ```shell
-bash choice_to_QA.sh ./path/to/context.json /path/to/test.json 
+bash run.sh  /path/to/Taiwan-Llama /path/to/adapter_checkpoint/ /path/to/input/test.json /path/to/output/output.json
+
+
 ```
 
-3.Span selection predict
-```shell
-bash QA.sh /path/to/context.json /path/to/test.json /path/to/pred/prediction.csv
-```
-
-step 2 and 3 can use:
-```shell
-bash run.sh /path/to/context.json /path/to/test.json /path/to/pred/prediction.csv
-```
 
 
 
