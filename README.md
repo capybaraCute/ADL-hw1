@@ -32,6 +32,10 @@ Final Project for ADL
 - inference.py is used to create prediction data set used to rouge rating.
 - speech.ipynb is used to preprocess data in `./data/speech`, the preprocessed data would be place in `./data/preprocessed/speech`
 
+## Project execution procedure 
+1. Run speech.ipynb
+2. Run embedding.py
+3. Run chat_rag.py to interact with the robot.
 
 
 
