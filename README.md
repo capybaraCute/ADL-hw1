@@ -34,8 +34,8 @@ Final Project for ADL
 
 ## Project execution procedure 
 1. Run speech.ipynb
-2. Run embedding.py
-3. Run chat_rag.py to interact with the robot.
+2. Run embedding.py. Use `python embedding.py`.
+3. Run chat_rag.py to interact with the robot. Use `streamlit run chat_rag.py`.
 
 
 
