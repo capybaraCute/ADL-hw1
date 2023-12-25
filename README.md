@@ -17,7 +17,7 @@ Final Project for ADL
 ├── embedding.py
 ├── inference.py
 └── speech.ipynb
-```
+```  
 ## File Discription
 - Folder `Taiwan-LLM-7B-v2.0-chat` is used to put Taiwan-LLama model.
 - Folder `adapter_model` is used to put weights that we fine tune Taiwan-LLama model by qLora.
@@ -32,10 +32,16 @@ Final Project for ADL
 - inference.py is used to create prediction data set used to rouge rating.
 - speech.ipynb is used to preprocess data in `./data/speech`, the preprocessed data would be place in `./data/preprocessed/speech`
 
+## Execution Environment
+- `python 3.10.13`
+- `pip install -r requirements.txt`    
+  
 ## Project execution procedure 
 1. Run speech.ipynb
 2. Run embedding.py. Use `python embedding.py`.
 3. Run chat_rag.py to interact with the robot. Use `streamlit run chat_rag.py`.
+
+
 
 
 
