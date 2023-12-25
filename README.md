@@ -1,49 +1,32 @@
-# ADL-hw1
-homework 1 for ADL
+# ADL-Final Project
+Final Project for ADL
 
-## How to train
-1.Place training data at the same directory
-  e.g. `./train.json` , `./valid.json` , `./context.json`
-  
-2.Train Paragraph selection Model by:
+## Directory Structure
 ```shell
-bash train_select.sh
+.
+├── Taiwan-LLM-7B-v2.0-chat
+├── adapter_model
+├── chat_rag.py
+├── data
+│   ├── preprocessed
+│   │   └── speech
+│   ├── speech
+│   ├── test
+│   └── test_result
+├── embedding.py
+├── inference.py
+└── speech.ipynb
 ```
-  Model will be located at `./choice_model/`
-  
-3.Convert train and validation data to QA format
-```shell
-bash train_choice_to_QA.sh
-```
-
-4.Train Span selection Model by:
-```shell
-bash train_QA_model.sh
-```
-Model will be located at `./macbert_large_output/`
-
-## Train and plot span selection model
-```shell
-bash train_choice_to_QA.sh
-bash train_QA_and_plot.sh
-```
-## Test
-1.Place model `choice_model/` `macbert_large_output/` at the same directory.
-
-2.Paragraph selection predict
-```shell
-bash choice_to_QA.sh ./path/to/context.json /path/to/test.json 
-```
-
-3.Span selection predict
-```shell
-bash QA.sh /path/to/context.json /path/to/test.json /path/to/pred/prediction.csv
-```
-
-step 2 and 3 can use:
-```shell
-bash run.sh /path/to/context.json /path/to/test.json /path/to/pred/prediction.csv
-```
+## File Discription
+- Folder `Taiwan-LLM-7B-v2.0-chat` is used to put Taiwan-LLama model.
+- Folder `adapter_model` is used to put weights that we fine tune Taiwan-LLama model by qLora.
+- Folder `data` is used to put all data we used.
+  - Folder `preprocessed` is used to put preprocessed data.
+  - Folder `speech` is used to put raw data we obtain from <https://hackmd.io/@johnshao>.
+  - Folder `test` is used to put test data that we separate from training data.
+  - Folder `test_result` is used to put preprocessed test data.
+- chat_rag.py is used to construct a demo web.
+- embedding.py is used to create a vector database using data in `./data/preprocessed/speech`.
 
 
 
