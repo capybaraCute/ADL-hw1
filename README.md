@@ -10,6 +10,7 @@ Final Project for ADL
 ├── data
 │   ├── preprocessed
 │   │   └── speech
+│   ├── qa
 │   ├── speech
 │   ├── test
 │   └── test_result
@@ -22,11 +23,15 @@ Final Project for ADL
 - Folder `adapter_model` is used to put weights that we fine tune Taiwan-LLama model by qLora.
 - Folder `data` is used to put all data we used.
   - Folder `preprocessed` is used to put preprocessed data.
+  - Folder `qa` is used to put Question-Answer data.
   - Folder `speech` is used to put raw data we obtain from <https://hackmd.io/@johnshao>.
   - Folder `test` is used to put test data that we separate from training data.
   - Folder `test_result` is used to put preprocessed test data.
 - chat_rag.py is used to construct a demo web.
 - embedding.py is used to create a vector database using data in `./data/preprocessed/speech`.
+- inference.py is used to create prediction data set used to rouge rating.
+- speech.ipynb is used to preprocess data in `./data/speech`, the preprocessed data would be place in `./data/preprocessed/speech`
+
 
 
 
